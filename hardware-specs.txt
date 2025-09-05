@@ -1,0 +1,45 @@
+Gathering system information...
+=================================
+
+
+
+=== COPY THE OUTPUT BELOW INTO YOUR YAML FILE ===
+
+
+hardware:
+  manufacturer: "Hewlett-Packard"
+  model: "23-q067c"
+  serial_number: "8CC51705DZ"
+  bios_version: "80.01 2.8"
+  cpu:
+    model: "Intel(R) Core(TM) i5-4590T CPU @ 2.00GHz"
+    cores: 4
+    threads: 4
+    frequency_ghz: 2
+  memory:
+    total_gb: 8
+    sticks:
+      - size_gb: 8
+        speed_mhz: 1600
+        manufacturer: "Hynix/Hyundai"
+        part_number: "HMT41GS6BFR8A-PB"
+  storage:
+    - model: "WDC WD10EZEX-60M2NA0"
+      size_gb: 931.51
+      interface: "IDE"
+      type: "Fixed hard disk media"
+      serial_number: "WD-WCC3F0VFY2V8"
+  graphics:
+    model: "Intel(R) HD Graphics 4600"
+    memory_mb: 1024
+  network_adapters:
+    - description: "Intel(R) Dual Band Wireless-AC 3160"
+      ipv4_address: "192.168.0.212, fe80::1def:df39:1cf0:5f8d"
+      mac_address: "F4:06:69:48:EA:1D"
+
+
+=== DATA COLLECTION COMPLETE ===
+1. Select all the text above starting under the === line.
+2. Right-click to copy it.
+3. Paste it directly into your YAML file under the appropriate node.
+PS C:\WINDOWS\system32>
