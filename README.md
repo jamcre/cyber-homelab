@@ -83,12 +83,13 @@ This repository documents my journey building a cybersecurity homelab on a repur
 
 ```
 cyber-homelab/
-├── hardware/           # Hardware specifications and upgrade documentation
-├── proxmox-install/    # Proxmox installation notes and troubleshooting
-├── pihole-deployment/  # Pi-hole configuration and setup
-├── pentest-lab/        # Kali & Ubuntu VM setup + security testing results
-├── diagrams/           # Network and architecture diagrams
-├── metrics/            # System performance metrics
+├── phase1-hardware/           # Hardware specifications and upgrade documentation
+├── phase2-proxmox-install/    # Proxmox installation notes and troubleshooting
+├── phase3-pihole-deployment/  # Pi-hole configuration and setup
+├── phase4-pentest-lab/        # Kali & Ubuntu VM setup + security testing results
+├── docs/                      # Network and architecture diagrams & documents
+├── metrics/                   # System performance metrics
+├── images/                    # Pictures and screenshots
 └── README.md
 ```
 
