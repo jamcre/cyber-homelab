@@ -28,4 +28,4 @@ hardware:
     - description: "Intel(R) Dual Band Wireless-AC 3160"
       ipv4_address: "192.168.0.212, fe80::1def:df39:1cf0:5f8d"
       mac_address: "F4:06:69:48:EA:1D"
-    - ethernet: "Yes"
+    - ethernet: "Realtek Semiconductor Co., Ltd. RTL8111/8168/8211/8411 PCI Express Gigabit Ethernet Controller (rev 10)""
