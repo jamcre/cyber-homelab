@@ -1,0 +1,7 @@
+- Nikto v2.5.0/
++ Target Host: 192.168.0.53
++ Target Port: 80
++ GET /admin: Retrieved access-control-allow-origin header: *.
++ GET /admin/package.json: Node.js package file found. It may contain sensitive information.
++ GET /admin/.gitignore: .gitignore file found. It is possible to grasp the directory structure.
++ GET /admin/README.md: Readme Found.

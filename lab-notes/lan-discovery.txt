@@ -1,0 +1,43 @@
+# Nmap 7.95 scan initiated Sun Sep  7 08:01:39 2025 as: /usr/lib/nmap/nmap --privileged -sn -oN Desktop/lab-notes/lan-discovery.txt 192.168.0.0/24
+Nmap scan report for 192.168.0.1
+Host is up (0.00051s latency).
+MAC Address: 00:31:92:DA:71:C4 (TP-Link Limited)
+Nmap scan report for 192.168.0.50
+Host is up (0.00022s latency).
+MAC Address: D0:BF:9C:9F:5E:F2 (Hewlett Packard)
+Nmap scan report for 192.168.0.53
+Host is up (0.00022s latency).
+MAC Address: BC:24:11:10:34:D2 (Proxmox Server Solutions GmbH)
+Nmap scan report for 192.168.0.102
+Host is up (0.10s latency).
+MAC Address: 5C:87:30:13:3C:28 (Apple)
+Nmap scan report for 192.168.0.136
+Host is up (0.088s latency).
+MAC Address: B8:0B:DA:F0:19:0E (GD Midea Air-Conditioning Equipment)
+Nmap scan report for 192.168.0.139
+Host is up (0.090s latency).
+MAC Address: B8:0B:DA:8F:17:FA (GD Midea Air-Conditioning Equipment)
+Nmap scan report for 192.168.0.149
+Host is up (0.090s latency).
+MAC Address: B8:0B:DA:8E:5A:E8 (GD Midea Air-Conditioning Equipment)
+Nmap scan report for 192.168.0.161
+Host is up (0.083s latency).
+MAC Address: 68:FC:CA:F0:5D:CA (Samsung Electronics)
+Nmap scan report for 192.168.0.162
+Host is up (0.081s latency).
+MAC Address: 30:52:23:D0:F9:8E (Unknown)
+Nmap scan report for 192.168.0.170
+Host is up (0.098s latency).
+MAC Address: 9E:77:62:5C:32:75 (Unknown)
+Nmap scan report for 192.168.0.188
+Host is up (0.091s latency).
+MAC Address: B8:0B:DA:F1:26:4A (GD Midea Air-Conditioning Equipment)
+Nmap scan report for 192.168.0.201
+Host is up (0.10s latency).
+MAC Address: BC:10:2F:2E:18:4A (SJI Industry Company)
+Nmap scan report for 192.168.0.213
+Host is up (0.00035s latency).
+MAC Address: 3C:7C:3F:BF:0A:EF (ASUSTek Computer)
+Nmap scan report for 192.168.0.247
+Host is up.
+# Nmap done at Sun Sep  7 08:01:42 2025 -- 256 IP addresses (14 hosts up) scanned in 2.36 seconds
