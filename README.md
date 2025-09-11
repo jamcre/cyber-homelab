@@ -88,7 +88,6 @@ cyber-homelab/
 ├── phase3-pihole-deployment/  # Pi-hole configuration and setup
 ├── phase4-pentest-lab/        # Kali & Ubuntu VM setup + security testing results
 ├── docs/                      # Network and architecture diagrams & documents
-├── metrics/                   # System performance metrics
 ├── images/                    # Pictures and screenshots
 └── README.md
 ```
