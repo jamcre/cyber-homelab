@@ -9,11 +9,19 @@ With the hardware upgraded and stable, the next step was to install a **bare-met
 - Downloaded the latest **Proxmox VE ISO** from the official site.
 - Flashed it onto a USB thumb drive using **balenaEtcher**.
 
-![Flashing Proxmox ISO](../images/phase2-proxmox-install/flash-proxmox-iso-balenaetcher.png)
+<picture>
+  <div align="center">
+    <img src="../images/phase2-proxmox-install/flash-proxmox-iso-balenaetcher.png" alt="Flashing Proxmox ISO" style="width:600px;">
+  </div>
+</picture>
 
 Due to issues detailed later, I switched to and tested **Ventoy** to create a bootable multi-ISO USB.
 
-![Ventoy Bootloader](../images/phase2-proxmox-install/ventoy-bootloader.jpg)
+<picture>
+  <div align="center">
+    <img src="../images/phase2-proxmox-install/ventoy-bootloader.jpg" alt="Ventoy Bootloader" style="width:600px;">
+  </div>
+</picture>
 
 ---
 
@@ -25,17 +33,37 @@ To boot successfully into the installer:
 2. Disabled unnecessary boot sources.
 3. Ensured only the USB was enabled.
 
-![Choose Boot Media](../images/phase2-proxmox-install/choose-boot-media.jpg)  
-![Disable Other Boot Sources](../images/phase2-proxmox-install/disable-boot-sources-except-thumbdrive.jpg)
+<picture>
+  <div align="center">
+    <img src="../images/phase2-proxmox-install/choose-boot-media.jpg" alt="Choose Boot Media" style="width:600px;">
+  </div>
+</picture>
+<picture>
+  <div align="center">
+    <img src="../images/phase2-proxmox-install/disable-boot-sources-except-thumbdrive.jpg" alt="Disable Other Boot Sources" style="width:600px;">
+  </div>
+</picture>
 
-At first, the drive wasn’t detected:
+At first, the drive wasn't detected:
 
-![Drive Not Detected](../images/phase2-proxmox-install/drive-not-detected.jpg)
+<picture>
+  <div align="center">
+    <img src="../images/phase2-proxmox-install/drive-not-detected.jpg" alt="Drive Not Detected" style="width:600px;">
+  </div>
+</picture>
 
 The fix: enabling **Legacy Boot** in BIOS.
 
-![Enable Legacy Boot](../images/phase2-proxmox-install/enable-legacy-boot.jpg)  
-![Legacy Boot Disabled](../images/phase2-proxmox-install/legacy-boot-disabled.jpg)
+<picture>
+  <div align="center">
+    <img src="../images/phase2-proxmox-install/enable-legacy-boot.jpg" alt="Enable Legacy Boot" style="width:600px;">
+  </div>
+</picture>
+<picture>
+  <div align="center">
+    <img src="../images/phase2-proxmox-install/legacy-boot-disabled.jpg" alt="Legacy Boot Disabled" style="width:600px;">
+  </div>
+</picture>
 
 ---
 
@@ -43,7 +71,11 @@ The fix: enabling **Legacy Boot** in BIOS.
 
 Once the system recognized the USB, I booted into the **Proxmox installer**.
 
-![Proxmox Installer](../images/phase2-proxmox-install/proxmox-installer.jpg)
+<picture>
+  <div align="center">
+    <img src="../images/phase2-proxmox-install/proxmox-installer.jpg" alt="Proxmox Installer" style="width:600px;">
+  </div>
+</picture>
 
 Steps included:
 
@@ -59,8 +91,16 @@ Steps included:
 After reboot, Proxmox VE was accessible via browser at:  
 `https://<proxmox-ip>:8006`
 
-- ![Login Screen](../images/phase2-proxmox-install/proxmox-web-interface-login.png)
-- ![Proxmox Dashboard](../images/phase2-proxmox-install/proxmox-web-interface-home.png)
+<picture>
+  <div align="center">
+    <img src="../images/phase2-proxmox-install/proxmox-web-interface-login.png" alt="Login Screen" style="width:600px;">
+  </div>
+</picture>
+<picture>
+  <div align="center">
+    <img src="../images/phase2-proxmox-install/proxmox-web-interface-home.png" alt="Proxmox Dashboard" style="width:600px;">
+  </div>
+</picture>
 
 ---
 

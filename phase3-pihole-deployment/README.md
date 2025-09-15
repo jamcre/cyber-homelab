@@ -22,8 +22,16 @@ Using the Proxmox Web UI:
    - CPU/RAM limits: modest allocation for lightweight performance
    - Networking: bridged mode for LAN visibility
 
-![Container Configs](../images/phase3-pihole-deployment/pihole-lxc-container-configs.png)  
-![Container Summary](../images/phase3-pihole-deployment/pihole-container-summary.png)
+<picture>
+  <div align="center">
+    <img src="../images/phase3-pihole-deployment/pihole-lxc-container-configs.png" alt="Container Configs" style="width:600px;">
+  </div>
+</picture>
+<picture>
+  <div align="center">
+    <img src="../images/phase3-pihole-deployment/pihole-container-summary.png" alt="Container Summary" style="width:600px;">
+  </div>
+</picture>
 
 ---
 
@@ -31,27 +39,43 @@ Using the Proxmox Web UI:
 
 Logged into the container and ran the automated installation script:
 
-![Pi-hole Console Installation](../images/phase3-pihole-deployment/pihole-console-installation.png)
+<picture>
+  <div align="center">
+    <img src="../images/phase3-pihole-deployment/pihole-console-installation.png" alt="Pi-hole Console Installation" style="width:600px;">
+  </div>
+</picture>
 
-Once complete, Pi-hole’s web interface was accessible at:  
+Once complete, Pi-hole's web interface was accessible at:  
 `http://<pi-hole-ip>/admin`
 
-![Pi-hole Web Login](../images/phase3-pihole-deployment/pihole-web-login.png)
+<picture>
+  <div align="center">
+    <img src="../images/phase3-pihole-deployment/pihole-web-login.png" alt="Pi-hole Web Login" style="width:600px;">
+  </div>
+</picture>
 
 ---
 
 ## 📊 Dashboard & Testing
 
-Initially, the router wasn’t pointing to Pi-hole as the primary DNS, so no traffic flowed through it:
+Initially, the router wasn't pointing to Pi-hole as the primary DNS, so no traffic flowed through it:
 
-![Router Not Pointed](../images/phase3-pihole-deployment/pihole-dashboard-router-not-pointed.png)
+<picture>
+  <div align="center">
+    <img src="../images/phase3-pihole-deployment/pihole-dashboard-router-not-pointed.png" alt="Router Not Pointed" style="width:600px;">
+  </div>
+</picture>
 
 After addressing this through IP reservation and other router configs, Pi-hole immediately began logging DNS queries.
 
 - Live dashboard confirmed activity.
 - Verified that blocking lists were applied.
 
-![Pi-hole Dashboard Live](../images/phase3-pihole-deployment/pihole-dashboard-live.png)
+<picture>
+  <div align="center">
+    <img src="../images/phase3-pihole-deployment/pihole-dashboard-live.png" alt="Pi-hole Dashboard Live" style="width:600px;">
+  </div>
+</picture>
 
 ---
 
