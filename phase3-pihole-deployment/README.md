@@ -18,9 +18,11 @@ Using the Proxmox Web UI:
 
 1. Created an **LXC container** for Pi-hole.
 2. Configured:
-   - Base image: Ubuntu Server (LXC template)
-   - CPU/RAM limits: modest allocation for lightweight performance
-   - Networking: bridged mode for LAN visibility
+   - Base Image: Debian 12 (LXC template)
+   - Allocated Resources:
+     - CPU: 1 Core(s)
+     - Memory: 512 MiB
+     - Storage: 8GB
 
 <picture>
   <div align="center">

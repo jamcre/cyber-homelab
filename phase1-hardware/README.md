@@ -123,7 +123,7 @@ Close-up component views:
 
 ### Storage
 
-- Replaced the slow HDD with a **Samsung 870 EVO 500GB SSD** for faster performance.
+- Replaced the slow HDD with a **PNY CS900 1TB SSD** for faster performance.
 
 <picture>
   <div align="center">
@@ -160,8 +160,8 @@ The Pavilion was carefully reassembled after upgrades.
 This phase includes:
 
 - [`hardware.yaml`](./hardware.yaml): Structured hardware inventory
-- [`hardware-spec-script.txt`](./hardware-spec-script.txt): Script used for pulling specs
-- [`hardware-spec-script-results.txt`](./hardware-spec-script-results.txt): Captured results after running script
+- [`hardware-spec-script.txt`](/scripts/hardware-specs.ps1): Script used for pulling specs
+- [`hardware-spec-script-results.txt`](./hardware-specs-script-results.txt): Captured results after running script
 
 ---
 
