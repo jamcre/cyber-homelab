@@ -17,27 +17,27 @@ Task Manager snapshots (pre-upgrade):
 
 <picture>
   <div align="center">
-    <img src="../images/phase1-hardware/old-pavilion-task-manager-cpu-pre-upgrade.PNG" alt="CPU Pre-Upgrade" style="width:600px;">
+    <img src="../images/phase1-hardware/old-pavilion-task-manager-cpu-pre-upgrade.png" alt="CPU Pre-Upgrade" style="width:600px;">
   </div>
 </picture>
 <picture>
   <div align="center">
-    <img src="../images/phase1-hardware/old-pavilion-task-manager-ram-pre-upgrade.PNG" alt="RAM Pre-Upgrade" style="width:600px;">
+    <img src="../images/phase1-hardware/old-pavilion-task-manager-ram-pre-upgrade.png" alt="RAM Pre-Upgrade" style="width:600px;">
   </div>
 </picture>
 <picture>
   <div align="center">
-    <img src="../images/phase1-hardware/old-pavilion-task-manager-storage-pre-upgrade.PNG" alt="Storage Pre-Upgrade" style="width:600px;">
+    <img src="../images/phase1-hardware/old-pavilion-task-manager-storage-pre-upgrade.png" alt="Storage Pre-Upgrade" style="width:600px;">
   </div>
 </picture>
 <picture>
   <div align="center">
-    <img src="../images/phase1-hardware/old-pavilion-task-manager-gpu-pre-upgrade.PNG" alt="GPU Pre-Upgrade" style="width:600px;">
+    <img src="../images/phase1-hardware/old-pavilion-task-manager-gpu-pre-upgrade.png" alt="GPU Pre-Upgrade" style="width:600px;">
   </div>
 </picture>
 <picture>
   <div align="center">
-    <img src="../images/phase1-hardware/old-pavilion-task-manager-net-pre-upgrade.PNG" alt="Network Pre-Upgrade" style="width:600px;">
+    <img src="../images/phase1-hardware/old-pavilion-task-manager-net-pre-upgrade.png" alt="Network Pre-Upgrade" style="width:600px;">
   </div>
 </picture>
 
