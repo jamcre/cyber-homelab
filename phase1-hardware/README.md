@@ -15,11 +15,31 @@ Before upgrades, the machine had:
 
 Task Manager snapshots (pre-upgrade):
 
-- ![CPU Pre-Upgrade](../images/phase1-hardware/old-pavilion-task-manager-cpu-pre-upgrade.PNG)
-- ![RAM Pre-Upgrade](../images/phase1-hardware/old-pavilion-task-manager-ram-pre-upgrade.PNG)
-- ![Storage Pre-Upgrade](../images/phase1-hardware/old-pavilion-task-manager-storage-pre-upgrade.PNG)
-- ![GPU Pre-Upgrade](../images/phase1-hardware/old-pavilion-task-manager-gpu-pre-upgrade.PNG)
-- ![Network Pre-Upgrade](../images/phase1-hardware/old-pavilion-task-manager-net-pre-upgrade.PNG)
+<picture>
+  <div align="center">
+    <img src="../images/phase1-hardware/old-pavilion-task-manager-cpu-pre-upgrade.PNG" alt="CPU Pre-Upgrade" style="width:600px;">
+  </div>
+</picture>
+<picture>
+  <div align="center">
+    <img src="../images/phase1-hardware/old-pavilion-task-manager-ram-pre-upgrade.PNG" alt="RAM Pre-Upgrade" style="width:600px;">
+  </div>
+</picture>
+<picture>
+  <div align="center">
+    <img src="../images/phase1-hardware/old-pavilion-task-manager-storage-pre-upgrade.PNG" alt="Storage Pre-Upgrade" style="width:600px;">
+  </div>
+</picture>
+<picture>
+  <div align="center">
+    <img src="../images/phase1-hardware/old-pavilion-task-manager-gpu-pre-upgrade.PNG" alt="GPU Pre-Upgrade" style="width:600px;">
+  </div>
+</picture>
+<picture>
+  <div align="center">
+    <img src="../images/phase1-hardware/old-pavilion-task-manager-net-pre-upgrade.PNG" alt="Network Pre-Upgrade" style="width:600px;">
+  </div>
+</picture>
 
 ---
 
@@ -33,18 +53,54 @@ The Pavilion was disassembled to access its internals. Key steps:
 
 Pictures from the teardown:
 
-- ![Cover Off](../images/phase1-hardware/pavilion-cover-off.jpg)
-- ![Open Top](../images/phase1-hardware/pavilion-open-top.jpg)
-- ![Laid Out](../images/phase1-hardware/pavilion-laid-out.jpg)
-- ![Complete Teardown](../images/phase1-hardware/pavilion-complete-teardown.jpg)
-- ![Right Table View](../images/phase1-hardware/pavilion-table-right-view.jpg)
+<picture>
+  <div align="center">
+    <img src="../images/phase1-hardware/pavilion-cover-off.jpg" alt="Cover Off" style="width:600px;">
+  </div>
+</picture>
+<picture>
+  <div align="center">
+    <img src="../images/phase1-hardware/pavilion-open-top.jpg" alt="Open Top" style="width:600px;">
+  </div>
+</picture>
+<picture>
+  <div align="center">
+    <img src="../images/phase1-hardware/pavilion-laid-out.jpg" alt="Laid Out" style="width:600px;">
+  </div>
+</picture>
+<picture>
+  <div align="center">
+    <img src="../images/phase1-hardware/pavilion-complete-teardown.jpg" alt="Complete Teardown" style="width:600px;">
+  </div>
+</picture>
+<picture>
+  <div align="center">
+    <img src="../images/phase1-hardware/pavilion-table-right-view.jpg" alt="Right Table View" style="width:600px;">
+  </div>
+</picture>
 
 Close-up component views:
 
-- ![Old HDD](../images/phase1-hardware/closeup-hdd.jpg)
-- ![Old Storage](../images/phase1-hardware/closeup-old-pavilion-storage.jpg)
-- ![RAM Slot](../images/phase1-hardware/closeup-old-pavilion-ram-slot.jpg)
-- ![Old Components](../images/phase1-hardware/closeup-old-components.jpg)
+<picture>
+  <div align="center">
+    <img src="../images/phase1-hardware/closeup-hdd.jpg" alt="Old HDD" style="width:600px;">
+  </div>
+</picture>
+<picture>
+  <div align="center">
+    <img src="../images/phase1-hardware/closeup-old-pavilion-storage.jpg" alt="Old Storage" style="width:600px;">
+  </div>
+</picture>
+<picture>
+  <div align="center">
+    <img src="../images/phase1-hardware/closeup-old-pavilion-ram-slot.jpg" alt="RAM Slot" style="width:600px;">
+  </div>
+</picture>
+<picture>
+  <div align="center">
+    <img src="../images/phase1-hardware/closeup-old-components.jpg" alt="Old Components" style="width:600px;">
+  </div>
+</picture>
 
 ---
 
@@ -54,14 +110,26 @@ Close-up component views:
 
 - Added another **8 GB DDR3L stick**, bringing total to **16 GB**.
 
-![RAM Upgrade](../images/phase1-hardware/closeup-ram.jpg)  
-![Second RAM Slotted](../images/phase1-hardware/closeup-second-ram-upgrade-slotted.jpg)
+<picture>
+  <div align="center">
+    <img src="../images/phase1-hardware/closeup-ram.jpg" alt="RAM Upgrade" style="width:600px;">
+  </div>
+</picture>
+<picture>
+  <div align="center">
+    <img src="../images/phase1-hardware/closeup-second-ram-upgrade-slotted.jpg" alt="Second RAM Slotted" style="width:600px;">
+  </div>
+</picture>
 
 ### Storage
 
 - Replaced the slow HDD with a **Samsung 870 EVO 500GB SSD** for faster performance.
 
-![Upgraded Storage](../images/phase1-hardware/closeup-upgraded-storage.jpg)
+<picture>
+  <div align="center">
+    <img src="../images/phase1-hardware/closeup-upgraded-storage.jpg" alt="Upgraded Storage" style="width:600px;">
+  </div>
+</picture>
 
 ---
 
@@ -69,9 +137,21 @@ Close-up component views:
 
 The Pavilion was carefully reassembled after upgrades.
 
-- ![Assembled](../images/phase1-hardware/upgraded-pavilion-assembled.jpg)
-- ![Sealed](../images/phase1-hardware/upgraded-pavilion-sealed.jpg)
-- ![Boot Screen](../images/phase1-hardware/old-pavilion-boot.jpg)
+<picture>
+  <div align="center">
+    <img src="../images/phase1-hardware/upgraded-pavilion-assembled.jpg" alt="Assembled" style="width:600px;">
+  </div>
+</picture>
+<picture>
+  <div align="center">
+    <img src="../images/phase1-hardware/upgraded-pavilion-sealed.jpg" alt="Sealed" style="width:600px;">
+  </div>
+</picture>
+<picture>
+  <div align="center">
+    <img src="../images/phase1-hardware/old-pavilion-boot.jpg" alt="Boot Screen" style="width:600px;">
+  </div>
+</picture>
 
 ---
 
