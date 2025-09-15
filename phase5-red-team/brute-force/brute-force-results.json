@@ -1,0 +1,9 @@
+{
+  "burp-suite": {
+    "admin": "password"
+  },
+  "hydra": {
+    "admin": "password",
+    "pablo": "letmein"
+  }
+}
