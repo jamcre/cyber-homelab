@@ -4,8 +4,8 @@
 # =============================================================================
 # Maintained by: James
 # Repository:    https://github.com/jamcre/cyber-homelab
-# Last updated:  2026-03-06
-# Version:       1.1.0
+# Last updated:  2026-03-07
+# Version:       1.2.0
 # Purpose:
 #   - Hardware inventory for all machines in the home network.
 #   - Documents physical specs, OS configs, network posture, and active workloads.
@@ -241,6 +241,11 @@ machines:
           ipv4: DHCP
           mac_address: "XX:XX:XX:XX:XX:XX"
           note: Fast Ethernet only — Gigabit USB-C/USB-A adapter possible upgrade
+        - type: ethernet-usb
+          chipset: USB 3.0 Gigabit Adapter
+          speed: 1 Gbps
+          interface: USB 3.0
+          note: primary ethernet interface for lab use
         - type: wifi
           chipset: Qualcomm QCA9377 (802.11ac)
           ipv4: DHCP
