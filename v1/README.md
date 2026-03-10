@@ -33,7 +33,7 @@ This repository documents my journey building a cybersecurity homelab on a repur
 
 - **Objective:** Repurpose old hardware into a viable lab host.
 - **Actions:** Assessed an HP Pavilion (2015), upgraded the HDD to a 1TB SSD, and added a second 8GB RAM stick for a total of 16GB DDR3L.
-- **Evidence:** [Hardware Specs, Images, and Notes](./phase1-hardware)
+- **Evidence:** [Hardware Specs, Images, and Notes](./phase1-hardware/README.md)
 
 ### Phase 2: Proxmox VE Installation
 
@@ -42,7 +42,7 @@ This repository documents my journey building a cybersecurity homelab on a repur
   - **Issue 1:** USB drive not detected in boot menu. **Solution:** Disabled Secure Boot and enabled Legacy Support in BIOS.
   - **Issue 2:** Proxmox ISO failed to boot. **Solution:** Used Ventoy instead of Rufus/Etcher to handle the hybrid ISO correctly.
   - **Issue 3:** BIOS could not find the Proxmox boot drive post-installation. **Solution:** Re-enabled pure UEFI mode in BIOS.
-- **Evidence:** [Installation Notes and Images](./phase2-proxmox-install)
+- **Evidence:** [Installation Notes and Images](./phase2-proxmox-install/README.md)
 
 ### Phase 3: Network Configuration & Pi-hole Deployment
 
@@ -54,7 +54,7 @@ This repository documents my journey building a cybersecurity homelab on a repur
   - Installed and configured Pi-hole.
   - Configured router to use Pi-hole as primary DNS server, with cloudflare as a backup DNS.
   - Monitored DNS queries for network activity analysis
-- **Evidence:** [Pi-hole Configuration and Setup](./phase3-pihole-deployment)
+- **Evidence:** [Pi-hole Configuration and Setup](./phase3-pihole-deployment/README.md)
 
 ### Phase 4: Building a Penetration Testing Lab
 
@@ -63,7 +63,7 @@ This repository documents my journey building a cybersecurity homelab on a repur
   - **Attack Machine:** Built a Kali Linux VM for offensive security tools.
   - **Target Machine:** Built an Ubuntu Server VM and installed the Damn Vulnerable Web Application (DVWA).
 - **Testing:** Performed network reconnaissance (`nmap`) and vulnerability scanning (`nikto`) from the Kali VM against the target.
-- **Evidence:** [Lab Setup, Configuration, and Scan Results](./phase4-pentest-lab)
+- **Evidence:** [Lab Setup, Configuration, and Scan Results](./phase4-pentest-lab/README.md)
 
 ---
 

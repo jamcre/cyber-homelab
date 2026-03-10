@@ -1,0 +1,301 @@
+---
+# =============================================================================
+# Homelab Hardware Inventory
+# =============================================================================
+# Maintained by: James
+# Repository:    https://github.com/jamcre/cyber-homelab
+# Last updated:  2026-03-09
+# Version:       1.3.0
+# Purpose:
+#   - Hardware inventory for all machines in the home network.
+#   - Documents physical specs, OS configs, network posture, and active workloads.
+#   - Intended for reference, lab documentation, and portfolio use.
+# =============================================================================
+
+machines:
+  - hostname: citadel
+
+    metadata:
+      type: desktop
+      role: workstation
+      status: online
+      built: 2021
+      manufacturer: custom-built
+      tags: [primary-workstation, gpu-compute, virtualization, gaming]
+
+    network:
+      interfaces:
+        - type: ethernet
+          speed: 1 Gbps
+          ipv4: 192.168.10.xxx
+          mac_address: "XX:XX:XX:XX:XX:XX"
+        - type: wifi
+          supported: true
+        - type: bluetooth
+          supported: true
+
+    hardware:
+      form_factor: tower
+      motherboard:
+        model: ASUS Prime Z490-V
+        chipset: Intel Z490
+        socket: LGA1200
+        form_factor: ATX
+      cpu:
+        model: Intel Core i7-10700K
+        cores: 8
+        threads: 16
+        base_clock: 3.8 GHz
+        boost_clock: 5.1 GHz
+        architecture: x86_64
+      graphics:
+        model: Gigabyte GeForce RTX 3070 Eagle OC
+        vram: 8 GB
+        interface: PCIe 4.0 x16
+        discrete: true
+        compute_capable: true
+      memory:
+        total: 32 GB
+        type: DDR4
+        speed: 3000 MT/s
+        modules:
+          - model: TEAMGROUP T-Force Vulcan Z
+            capacity: 2x 8 GB
+            latency: CL16
+          - model: Crucial Ballistix
+            capacity: 2x 8 GB
+            latency: CL15
+        note: Mixed kit, stable at 3000 MT/s with XMP enabled
+      storage:
+        - model: Western Digital Blue SN550
+          type: NVMe SSD
+          capacity: 1 TB
+          interface: PCIe 3.0 x4
+          purpose: OS & applications
+        - model: LEVEN JPS600
+          type: NVMe SSD
+          capacity: 2 TB
+          interface: PCIe 3.0 x4
+          purpose: media & bulk storage
+      power_supply:
+        model: Corsair RM850
+        wattage: 850W
+        efficiency: 80+ Gold
+        modular: fully modular
+
+    software:
+      os: Windows 11 Home
+      architecture: 64-bit
+      capabilities: [virtualization, gpu_acceleration, containerization]
+
+    notes: >
+      Primary workstation for development, cybersecurity labs, and gaming.
+      RTX 3070 can support GPU-accelerated workloads (security tooling)
+
+  - hostname: pavilion
+
+    metadata:
+      type: server
+      role: virtualization-host
+      status: online
+      built: 2015
+      manufacturer: Hewlett-Packard
+      model: HP 23-q067c All-in-One
+      tags: [always-on, proxmox, dns, security-labs, infrastructure]
+
+    network:
+      interfaces:
+        - type: ethernet
+          chipset: Realtek RTL8111/8168/8211
+          speed: 1 Gbps
+          ipv4: 192.168.20.xxx
+          mac_address: "XX:XX:XX:XX:XX:XX"
+        - type: wifi
+          chipset: Intel Dual Band Wireless-AC 3160
+          note: secondary / fallback only
+
+    hardware:
+      form_factor: all-in-one
+      cpu:
+        model: Intel Core i5-4590T
+        cores: 4
+        threads: 4
+        base_clock: 2.0 GHz
+        architecture: x86_64
+      graphics:
+        model: Intel HD Graphics 4600
+        discrete: false
+      memory:
+        total: 16 GB
+        type: DDR3L
+        speed: 1600 MT/s
+        modules: 2x 8 GB
+      storage:
+        - model: PNY CS900
+          type: SATA SSD
+          capacity: 1 TB
+          interface: SATA III
+          purpose: Proxmox OS, VM images & container storage
+
+    software:
+      os: Proxmox VE
+      hypervisor: KVM
+      container_runtime: LXC
+      capabilities: [virtualization, containerization, always_on_services]
+
+    workloads:
+      containers:
+        - name: Pi-hole
+          function: network-wide DNS filtering & ad blocking
+      virtual_machines:
+        - name: Kali Linux
+          function: penetration testing & security tooling
+        - name: Ubuntu Server
+          function: DVWA lab
+
+    notes: >
+      Repurposed all-in-one serving as the homelab's core infrastructure node.
+      Hosts Proxmox VE for VM/container management, Pi-hole for DNS filtering,
+      and isolated environments for active security lab work. VM networks should
+      be segmented from the main LAN.
+
+  - hostname: annex
+
+    metadata:
+      type: laptop
+      role: mobile-workstation
+      status: online
+      built: 2020
+      manufacturer: Apple
+      model: MacBook Pro 13-inch (Two Thunderbolt 3 ports)
+      tags: [mobile, development, productivity]
+
+    network:
+      interfaces:
+        - type: wifi
+          chipset: Apple AirPort (802.11ac)
+          ipv4: DHCP
+          mac_address: "XX:XX:XX:XX:XX:XX"
+        - type: bluetooth
+          supported: true
+        - type: ethernet
+          supported: false
+          note: available via USB-C adapter
+
+    hardware:
+      form_factor: laptop
+      cpu:
+        model: Intel Core i5-8257U
+        cores: 4
+        threads: 8
+        base_clock: 1.4 GHz
+        architecture: x86_64
+      graphics:
+        model: Intel Iris Plus Graphics 645
+        discrete: false
+        vram: 1536 MB
+      memory:
+        total: 8 GB
+        type: LPDDR3
+        speed: 2133 MT/s
+        modules: 2x 4 GB SK Hynix (soldered)
+      storage:
+        - model: Apple SSD AP0256N
+          type: NVMe SSD
+          capacity: 256 GB
+          detachable: false
+          purpose: OS & user data
+      display:
+        type: Retina IPS
+        size: 13.3 inch
+        resolution: 2560x1600
+      power:
+        type: internal battery
+
+    software:
+      os: macOS Sequoia
+      version: "15.7.4"
+      architecture: 64-bit
+      capabilities: [virtualization, containerization, mobile_productivity]
+
+    notes: >
+      Primary mobile workstation for development and portable lab access via
+      SSH and VPN. RAM and storage are soldered and not upgradeable.
+
+  - hostname: TBD
+
+    metadata:
+      type: laptop
+      role: TBD
+      status: online
+      built: 2021
+      manufacturer: Dell Inc.
+      model: Inspiron 3505 (P90F)
+      tags: [TBD]
+
+    network:
+      interfaces:
+        - type: ethernet
+          chipset: Realtek PCIe FE Family Controller
+          speed: 100 Mbps
+          ipv4: DHCP
+          mac_address: "XX:XX:XX:XX:XX:XX"
+          note: Fast Ethernet only — Gigabit USB-C/USB-A adapter possible upgrade
+        - type: ethernet-usb
+          chipset: USB 3.0 Gigabit Adapter
+          speed: 1 Gbps
+          interface: USB 3.0
+          note: primary ethernet interface for lab use
+        - type: wifi
+          chipset: Qualcomm QCA9377 (802.11ac)
+          ipv4: DHCP
+          mac_address: "XX:XX:XX:XX:XX:XX"
+        - type: bluetooth
+          supported: true
+
+    hardware:
+      form_factor: laptop
+      cpu:
+        model: AMD Ryzen 5 3450U
+        cores: 4
+        threads: 8
+        base_clock: 2.1 GHz
+        architecture: x86_64
+      graphics:
+        model: AMD Radeon Vega Mobile
+        discrete: false
+        vram: 2048 MB
+      memory:
+        total: 12 GB
+        type: DDR4
+        speed: 2400 MT/s
+        modules: 4 GB + 8 GB
+        note: both slots occupied, upgrade requires replacing both sticks
+      storage:
+        - model: Kioxia KBG40ZNS256G
+          type: NVMe SSD
+          capacity: 256 GB
+          interface: PCIe 3.0 x4
+          purpose: OS & applications
+        - model: Toshiba MQ04ABF100
+          type: HDD
+          capacity: 1 TB
+          interface: SATA III
+          purpose: bulk / data storage
+          note: spinning disk, probably slow
+      display:
+        type: FHD IPS
+        size: 15.6 inch
+        resolution: 1920x1080
+      power:
+        type: internal battery
+
+    software:
+      os: Windows 10 Home
+      architecture: 64-bit
+      capabilities: [virtualization]
+
+    notes: >
+      Newly acquired machine, role TBD. AMD-V virtualization confirmed and
+      100 Mbps ethernet is a known limitation — a USB Gigabit adapter is
+      a recommended upgrade for network-heavy roles.
