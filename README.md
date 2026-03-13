@@ -6,12 +6,12 @@ This repository documents the second iteration of my cybersecurity homelab. Buil
 
 ## 🖥️ Hardware
 
-| Hostname | Type    | Role                | OS              |
-| :------- | :------ | :------------------ | :-------------- |
-| citadel  | Desktop | Primary Workstation | Windows 11 Home |
-| pavilion | Server  | Virtualization Host | Proxmox VE      |
-| annex    | Laptop  | Mobile Workstation  | macOS Sequoia   |
-| TBD      | Laptop  | TBD                 | TBD             |
+| Hostname | Type    | Role                | OS              | VLAN         | IP            |
+| :------- | :------ | :------------------ | :-------------- | :----------- | :------------ |
+| citadel  | Desktop | Primary Workstation | Windows 11 Home | 10 — Trusted | 192.168.10.XX |
+| pavilion | Server  | Virtualization Host | Proxmox VE      | 20 — Lab     | 192.168.20.XX |
+| annex    | Laptop  | Mobile Workstation  | macOS Sequoia   | 10 — Trusted | DHCP          |
+| TBD      | Laptop  | TBD                 | Windows 10 Home | 20 — Lab     | DHCP          |
 
 Full hardware specs: [`hardware/hardware-inventory.yaml`](./hardware/hardware-inventory.yaml)
 
@@ -25,7 +25,15 @@ Full hardware specs: [`hardware/hardware-inventory.yaml`](./hardware/hardware-in
 | 20   | Lab     | 192.168.20.0/24 | Homelab infrastructure |
 | 30   | IoT     | 192.168.30.0/24 | Smart devices & NVR    |
 
+VLAN segmentation is live and verified. Firewall enforces zone isolation — Trusted can reach Lab, Lab cannot reach Trusted, IoT is fully isolated from internal networks.
+
 Full network design: [`network/README.md`](./network/README.md)
+
+---
+
+## ⚙️ Infrastructure
+
+> _Proxmox v2 rebuild in progress. To be documented as nodes are configured._
 
 ---
 
@@ -50,9 +58,6 @@ cyber-homelab/
 │   └── hardware-inventory.yaml
 ├── network/
 │   └── README.md
-├── infrastructure/            # Proxmox setup & node configs
-├── services/                  # Per-service deployment docs
-├── lab/                       # Security lab environment & exercises
 └── README.md
 ```
 
