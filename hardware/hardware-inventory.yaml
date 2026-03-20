@@ -4,8 +4,8 @@
 # =============================================================================
 # Maintained by: James
 # Repository:    https://github.com/jamcre/cyber-homelab
-# Last updated:  2026-03-12
-# Version:       1.4.0
+# Last updated:  2026-03-20
+# Version:       1.5.0
 # Purpose:
 #   - Hardware inventory for all machines in the home network.
 #   - Documents physical specs, OS configs, network posture, and active workloads.
@@ -150,13 +150,16 @@ machines:
       capabilities: [virtualization, containerization, always_on_services]
 
     workloads:
-      note: v2 rebuild in progress — no workloads deployed yet
+      containers:
+        - name: pihole
+          type: LXC
+          function: network-wide DNS filtering and ad blocking
+          ip: 192.168.20.XX
 
     notes: >
       Repurposed all-in-one serving as the homelab's core infrastructure node.
       Static IP configured in /etc/network/interfaces on the Proxmox host (vmbr0).
       On VLAN 20 Lab — can reach internet but not VLAN 10 Trusted.
-      v2 service deployment planned: TBD.
 
   - hostname: annex
 

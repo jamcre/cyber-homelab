@@ -33,13 +33,17 @@ Full network design: [`network/README.md`](./network/README.md)
 
 ## ⚙️ Infrastructure
 
-> _Proxmox v2 rebuild in progress. To be documented as nodes are configured._
+Proxmox VE running on pavilion as the core virtualization host. Full details: [`infrastructure/proxmox.md`](./infrastructure/proxmox.md)
 
 ---
 
 ## ⚙️ Services
 
-> _To be documented as services are deployed._
+| Service | Host           | Function                   |
+| :------ | :------------- | :------------------------- |
+| Pi-hole | pavilion (LXC) | Network-wide DNS filtering |
+
+Full details: [`services/pihole.md`](./services/pihole.md)
 
 ---
 
@@ -56,8 +60,12 @@ cyber-homelab/
 ├── v1/                        # Archived first iteration
 ├── hardware/
 │   └── hardware-inventory.yaml
+├── infrastructure/
+│   └── proxmox.md
 ├── network/
 │   └── README.md
+├── services/
+│   └── pihole.md
 └── README.md
 ```
 
