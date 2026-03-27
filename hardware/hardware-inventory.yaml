@@ -155,10 +155,12 @@ machines:
           type: LXC
           function: network-wide DNS filtering and ad blocking
           ip: 192.168.20.XX
+          note: CT ID 100
         - name: nginx
           type: LXC
           function: reverse proxy and SSL termination
           ip: 192.168.20.XX
+          note: CT ID 101
 
     notes: >
       Repurposed all-in-one serving as the homelab's core infrastructure node.

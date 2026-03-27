@@ -6,20 +6,20 @@ Network-wide DNS filtering and ad blocking deployed as an LXC container on pavil
 
 ## 📋 Container Specs
 
-| Property        | Value                       |
-| :-------------- | :-------------------------- |
-| CT ID           | 100                         |
-| Hostname        | `pihole`                    |
-| Template        | ubuntu-22.04-standard       |
-| VLAN            | 20 — Lab                    |
-| IP              | 192.168.20.XX/24            |
-| Gateway         | 192.168.20.1                |
-| CPU             | 1 core                      |
-| RAM             | 512 MB                      |
-| Swap            | 512 MB                      |
-| Disk            | 8 GB (local-lvm)            |
-| Pi-hole version | v6.x                        |
-| Web UI          | `https://pihole.jamcre.dev` |
+| Property        | Value                             |
+| :-------------- | :-------------------------------- |
+| CT ID           | 100                               |
+| Hostname        | `pihole`                          |
+| Template        | ubuntu-22.04-standard             |
+| VLAN            | 20 — Lab                          |
+| IP              | 192.168.20.XX/24                  |
+| Gateway         | 192.168.20.1                      |
+| CPU             | 1 core                            |
+| RAM             | 512 MB                            |
+| Swap            | 512 MB                            |
+| Disk            | 8 GB (local-lvm)                  |
+| Pi-hole version | v6.x                              |
+| Web UI          | `https://pihole.jamcre.dev/admin` |
 
 LXC nesting is enabled — required for Pi-hole FTL to run correctly inside a container.
 
@@ -63,11 +63,11 @@ This applies globally to all interfaces. Cloudflare (`1.1.1.1`) is the fallback 
 
 ## 🗺️ Local DNS Records
 
-| Hostname             | IP            | Description         |
-| :------------------- | :------------ | :------------------ |
-| `proxmox.jamcre.dev` | 192.168.20.XX | Nginx Proxy Manager |
-| `pihole.jamcre.dev`  | 192.168.20.XX | Nginx Proxy Manager |
-| `nginx.jamcre.dev`   | 192.168.20.XX | Nginx Proxy Manager |
+| Hostname             | IP            | Description                 |
+| :------------------- | :------------ | :-------------------------- |
+| `proxmox.jamcre.dev` | 192.168.20.XX | Routes to Proxmox via NPM   |
+| `pihole.jamcre.dev`  | 192.168.20.XX | Routes to Pi-hole via NPM   |
+| `nginx.jamcre.dev`   | 192.168.20.XX | Routes to NPM admin via NPM |
 
 All three hostnames resolve to Nginx Proxy Manager, which routes each request to the correct backend service based on the hostname.
 
