@@ -156,8 +156,6 @@ Operating in Basic 802.1Q VLAN mode. Port 1 is trunk carrying all VLANs tagged t
 
 ## ⚠️ Outstanding Items
 
-- Samsung FamilyHub fridge is currently on VLAN 10 (Trusted) — should be moved to VLAN 30 (IoT) via static DHCP reservation by MAC address
-- All smart home devices (AC units, cleaning robot, Samsung TV, doorbell) should be audited to confirm they are on VLAN 30
 - mDNS bridging via avahi-daemon for screen mirroring (MacBook → Samsung TV) is planned but not yet implemented
 
 ---

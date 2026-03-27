@@ -6,20 +6,20 @@ Clean v2 installation of Proxmox VE on pavilion. Replaces the v1 install which r
 
 ## 📋 Node Specs
 
-| Property           | Value                       |
-| :----------------- | :-------------------------- |
-| Hostname           | `pavilion.lan`              |
-| Proxmox VE version | 8.x                         |
-| Host CPU           | Intel Core i5-4590T (4c/4t) |
-| Host RAM           | 16 GB DDR3L                 |
-| Storage            | 1 TB SATA SSD (PNY CS900)   |
-| Network interface  | enp3s0 (Realtek RTL8111)    |
-| Bridge             | vmbr0                       |
-| VLAN               | 20 — Lab                    |
-| IP                 | 192.168.20.XX/24            |
-| Gateway            | 192.168.20.1                |
-| DNS                | 192.168.20.XX               |
-| Web UI             | `https://proxmox.lan:8006`  |
+| Property           | Value                        |
+| :----------------- | :--------------------------- |
+| Hostname           | `pavilion.lan`               |
+| Proxmox VE version | 8.x                          |
+| Host CPU           | Intel Core i5-4590T (4c/4t)  |
+| Host RAM           | 16 GB DDR3L                  |
+| Storage            | 1 TB SATA SSD (PNY CS900)    |
+| Network interface  | enp3s0 (Realtek RTL8111)     |
+| Bridge             | vmbr0                        |
+| VLAN               | 20 — Lab                     |
+| IP                 | 192.168.20.XX/24             |
+| Gateway            | 192.168.20.1                 |
+| DNS                | 192.168.20.XX (Pi-hole)      |
+| Web UI             | `https://proxmox.jamcre.dev` |
 
 ---
 
@@ -64,22 +64,27 @@ iface vmbr0 inet static
     bridge-fd 0
 ```
 
-Local DNS record `proxmox.lan → 192.168.20.XX` is configured in Pi-hole, allowing the web UI to be reached by hostname from any Trusted VLAN device.
+DNS resolves `proxmox.jamcre.dev` to Nginx Proxy Manager (`192.168.20.XX`) via Pi-hole local DNS records. NPM forwards the request to Proxmox at `192.168.20.XX:8006` with a valid wildcard SSL certificate.
 
 ---
 
 ## 🖥️ Workloads
 
-| Type | Name   | Function                                              |
-| :--- | :----- | :---------------------------------------------------- |
-| LXC  | pihole | Network-wide DNS filtering — see `services/pihole.md` |
+| Type | Name   | Function                                                    |
+| :--- | :----- | :---------------------------------------------------------- |
+| LXC  | pihole | Network-wide DNS filtering — see `services/pihole.md`       |
+| LXC  | nginx  | Reverse proxy and SSL termination — see `services/nginx.md` |
 
 ---
 
 ## 🔒 Access
 
-The Proxmox web UI is accessible from VLAN 10 (Trusted) and VLAN 20 (Lab).
-IoT devices have no path to the management interface.
+The Proxmox web UI is accessible from VLAN 10 (Trusted) and VLAN 20 (Lab). IoT devices have no path to the management interface.
+
+| Method            | Address                      |
+| :---------------- | :--------------------------- |
+| HTTPS (via NPM)   | `https://proxmox.jamcre.dev` |
+| Direct (fallback) | `https://192.168.20.XX:8006` |
 
 SSH access is available from citadel:
 
