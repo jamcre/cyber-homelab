@@ -4,8 +4,8 @@
 # =============================================================================
 # Maintained by: James
 # Repository:    https://github.com/jamcre/cyber-homelab
-# Last updated:  2026-03-20
-# Version:       1.5.0
+# Last updated:  2026-03-26
+# Version:       1.6.0
 # Purpose:
 #   - Hardware inventory for all machines in the home network.
 #   - Documents physical specs, OS configs, network posture, and active workloads.
@@ -154,6 +154,10 @@ machines:
         - name: pihole
           type: LXC
           function: network-wide DNS filtering and ad blocking
+          ip: 192.168.20.XX
+        - name: nginx
+          type: LXC
+          function: reverse proxy and SSL termination
           ip: 192.168.20.XX
 
     notes: >
