@@ -74,6 +74,7 @@ DNS resolves `proxmox.jamcre.dev` to Nginx Proxy Manager (`192.168.20.XX`) via P
 | :--- | :----- | :---------------------------------------------------------- |
 | LXC  | pihole | Network-wide DNS filtering — see `services/pihole.md`       |
 | LXC  | nginx  | Reverse proxy and SSL termination — see `services/nginx.md` |
+| VM   | wazuh  | SIEM and endpoint detection — see `services/wazuh.md`       |
 
 ---
 

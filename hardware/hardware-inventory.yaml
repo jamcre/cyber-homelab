@@ -4,8 +4,8 @@
 # =============================================================================
 # Maintained by: James
 # Repository:    https://github.com/jamcre/cyber-homelab
-# Last updated:  2026-03-26
-# Version:       1.6.0
+# Last updated:  2026-03-28
+# Version:       1.7.0
 # Purpose:
 #   - Hardware inventory for all machines in the home network.
 #   - Documents physical specs, OS configs, network posture, and active workloads.
@@ -161,6 +161,12 @@ machines:
           function: reverse proxy and SSL termination
           ip: 192.168.20.XX
           note: CT ID 101
+      virtual_machines:
+        - name: wazuh
+          type: VM
+          function: SIEM and endpoint detection
+          ip: 192.168.20.XX
+          note: VM ID 200, 8GB RAM, 3 CPU, 25GB disk
 
     notes: >
       Repurposed all-in-one serving as the homelab's core infrastructure node.

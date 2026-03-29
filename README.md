@@ -43,8 +43,9 @@ Proxmox VE running on pavilion as the core virtualization host. Full details: [`
 | :------------------ | :------------- | :-------------------------------- |
 | Pi-hole             | pavilion (LXC) | Network-wide DNS filtering        |
 | Nginx Proxy Manager | pavilion (LXC) | Reverse proxy and SSL termination |
+| Wazuh               | pavilion (VM)  | SIEM and endpoint detection       |
 
-Full details: [`services/pihole.md`](./services/pihole.md) · [`services/nginx.md`](./services/nginx.md)
+Full details: [`services/pihole.md`](./services/pihole.md) · [`services/nginx.md`](./services/nginx.md) · [`services/wazuh.md`](./services/wazuh.md)
 
 ---
 
@@ -67,7 +68,8 @@ cyber-homelab/
 │   └── README.md
 ├── services/
 │   ├── pihole.md
-│   └── nginx.md
+│   ├── nginx.md
+│   └── wazuh.md
 └── README.md
 ```
 
