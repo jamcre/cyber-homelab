@@ -68,6 +68,7 @@ This applies globally to all interfaces. Cloudflare (`1.1.1.1`) is the fallback 
 | `proxmox.jamcre.dev` | 192.168.20.XX | Routes to Proxmox via NPM   |
 | `pihole.jamcre.dev`  | 192.168.20.XX | Routes to Pi-hole via NPM   |
 | `nginx.jamcre.dev`   | 192.168.20.XX | Routes to NPM admin via NPM |
+| `wazuh.jamcre.dev`   | 192.168.20.XX | Routes to Wazuh via NPM     |
 
 All three hostnames resolve to Nginx Proxy Manager, which routes each request to the correct backend service based on the hostname.
 
