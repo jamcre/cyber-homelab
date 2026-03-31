@@ -4,8 +4,8 @@
 # =============================================================================
 # Maintained by: James
 # Repository:    https://github.com/jamcre/cyber-homelab
-# Last updated:  2026-03-28
-# Version:       1.7.0
+# Last updated:  2026-03-30
+# Version:       1.8.0
 # Purpose:
 #   - Hardware inventory for all machines in the home network.
 #   - Documents physical specs, OS configs, network posture, and active workloads.
@@ -320,3 +320,23 @@ machines:
       100 Mbps built-in ethernet is a known limitation — USB Gigabit adapter
       in use as primary ethernet interface for lab use.
       On VLAN 20 Lab via switch port 2.
+
+devices:
+  - name: NVR
+    manufacturer: Annke
+    type: network-video-recorder
+    network:
+      vlan: 30
+      vlan_name: iot
+      connection: wired
+      port: LAN 2 (router)
+      ipv4: 192.168.30.XX
+      mac_address: "54:8C:81:XX:XX:XX"
+      dhcp: true
+    access:
+      local: Annke Vision app (cloud-paired, works on any network)
+      web: http://192.168.30.XX (port 80, requires same subnet)
+    notes: >
+      Paired via QR code scan in Annke Vision app using Platform tab.
+      Cloud-based pairing works across VLANs without mDNS.
+      Cameras accessible remotely through app without port forwarding.

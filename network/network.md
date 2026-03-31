@@ -30,7 +30,7 @@ Redesigned the home network from a flat single-subnet layout to a VLAN-segmented
 | Port         | Connection               | VLAN         |
 | :----------- | :----------------------- | :----------- |
 | LAN 1        | NETGEAR GS308Ev4 (trunk) | 10, 20, 30   |
-| LAN 2        | -                        | -            |
+| LAN 2        | NVR                      | 30 — IoT     |
 | LAN 3        | -                        | -            |
 | LAN 4        | -                        | -            |
 | WiFi 2.4 GHz | IoT devices              | 30 — IoT     |
@@ -156,7 +156,7 @@ Operating in Basic 802.1Q VLAN mode. Port 1 is trunk carrying all VLANs tagged t
 
 ## ⚠️ Outstanding Items
 
-- mDNS bridging via avahi-daemon for screen mirroring (MacBook → Samsung TV) is planned but not yet implemented
+> _None at the moment._
 
 ---
 
