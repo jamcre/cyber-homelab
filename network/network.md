@@ -54,13 +54,13 @@ Redesigned the home network from a flat single-subnet layout to a VLAN-segmented
 
 The Archer A7 uses the swconfig model (not DSA). The internal switch chip must be configured separately from the software VLAN interfaces. LAN 1 carries tagged traffic for all VLANs to the NETGEAR switch.
 
-| VLAN | CPU    | LAN 1  | LAN 2 | LAN 3 | LAN 4 | WAN      |
-| :--- | :----- | :----- | :---- | :---- | :---- | :------- |
-| 1    | tagged | off    | off   | off   | off   | off      |
-| 2    | tagged | off    | off   | off   | off   | untagged |
-| 10   | tagged | tagged | off   | off   | off   | off      |
-| 20   | tagged | tagged | off   | off   | off   | off      |
-| 30   | tagged | tagged | off   | off   | off   | off      |
+| VLAN | CPU    | LAN 1  | LAN 2  | LAN 3 | LAN 4 | WAN      |
+| :--- | :----- | :----- | :----- | :---- | :---- | :------- |
+| 1    | tagged | off    | off    | off   | off   | off      |
+| 2    | tagged | off    | off    | off   | off   | untagged |
+| 10   | tagged | tagged | off    | off   | off   | off      |
+| 20   | tagged | tagged | off    | off   | off   | off      |
+| 30   | tagged | tagged | tagged | off   | off   | off      |
 
 ### OpenWRT — Interfaces
 
@@ -157,6 +157,14 @@ Operating in Basic 802.1Q VLAN mode. Port 1 is trunk carrying all VLANs tagged t
 ## ⚠️ Outstanding Items
 
 > _None at the moment._
+
+---
+
+## 🔓 Firewall Exceptions
+
+| Rule             | Source                    | Destination         | Port   | Reason                                  |
+| :--------------- | :------------------------ | :------------------ | :----- | :-------------------------------------- |
+| Allow-NPM-to-NVR | 192.168.20.XX (nginx LXC) | 192.168.30.XX (NVR) | TCP 80 | NVR web UI accessible via reverse proxy |
 
 ---
 
