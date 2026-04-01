@@ -4,8 +4,8 @@
 # =============================================================================
 # Maintained by: James
 # Repository:    https://github.com/jamcre/cyber-homelab
-# Last updated:  2026-03-30
-# Version:       1.8.0
+# Last updated:  2026-04-1
+# Version:       1.9.0
 # Purpose:
 #   - Hardware inventory for all machines in the home network.
 #   - Documents physical specs, OS configs, network posture, and active workloads.
