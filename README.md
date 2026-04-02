@@ -6,12 +6,12 @@ This repository documents the second iteration of my cybersecurity homelab. Buil
 
 ## 🖥️ Hardware
 
-| Hostname | Type    | Role                | OS              | VLAN         | IP            |
-| :------- | :------ | :------------------ | :-------------- | :----------- | :------------ |
-| citadel  | Desktop | Primary Workstation | Windows 11 Home | 10 — Trusted | 192.168.10.XX |
-| pavilion | Server  | Virtualization Host | Proxmox VE      | 20 — Lab     | 192.168.20.XX |
-| annex    | Laptop  | Mobile Workstation  | macOS Sequoia   | 10 — Trusted | DHCP          |
-| TBD      | Laptop  | TBD                 | Windows 10 Home | 20 — Lab     | DHCP          |
+| Hostname | Type    | Role                | OS                  | VLAN         | IP            |
+| :------- | :------ | :------------------ | :------------------ | :----------- | :------------ |
+| citadel  | Desktop | Primary Workstation | Windows 11 Home     | 10 — Trusted | 192.168.10.XX |
+| pavilion | Desktop | Virtualization Host | Proxmox VE 8.4      | 20 — Lab     | 192.168.20.XX |
+| annex    | Laptop  | Mobile Workstation  | macOS Sequoia       | 10 — Trusted | DHCP          |
+| inspiron | Laptop  | Docker Host         | Ubuntu Server 24.04 | 20 — Lab     | 192.168.20.XX |
 
 Full hardware specs: [`hardware/hardware-inventory.yaml`](./hardware/hardware-inventory.yaml)
 
@@ -33,7 +33,10 @@ Full network design: [`network/README.md`](./network/README.md)
 
 ## ⚙️ Infrastructure
 
-Proxmox VE running on pavilion as the core virtualization host. Full details: [`infrastructure/proxmox.md`](./infrastructure/proxmox.md)
+Proxmox VE running on pavilion as the core virtualization host.
+Ubuntu Server running on inspiron as the Docker host for self-hosted services.
+
+Full details: [`infrastructure/proxmox.md`](./infrastructure/proxmox.md) · [`infrastructure/inspiron.md`](./infrastructure/inspiron.md)
 
 ---
 
@@ -63,7 +66,8 @@ cyber-homelab/
 ├── hardware/
 │   └── hardware-inventory.yaml
 ├── infrastructure/
-│   └── proxmox.md
+│   ├── proxmox.md
+│   └── inspiron.md
 ├── network/
 │   └── README.md
 ├── services/

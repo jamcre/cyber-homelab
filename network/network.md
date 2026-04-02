@@ -41,9 +41,9 @@ Redesigned the home network from a flat single-subnet layout to a VLAN-segmented
 | Port | Device     | VLAN         | Type                       |
 | :--- | :--------- | :----------- | :------------------------- |
 | 1    | Router     | 10, 20, 30   | Trunk                      |
-| 2    | Dell       | 20 — Lab     | Access                     |
-| 3    | Pavilion   | 20 — Lab     | Access                     |
-| 4    | Citadel    | 10 — Trusted | Access                     |
+| 2    | inspiron   | 20 — Lab     | Access                     |
+| 3    | pavilion   | 20 — Lab     | Access                     |
+| 4    | citadel    | 10 — Trusted | Access                     |
 | 5–8  | Unassigned | 1 — Default  | Access (management access) |
 
 ---

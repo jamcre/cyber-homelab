@@ -5,7 +5,7 @@
 # Maintained by: James
 # Repository:    https://github.com/jamcre/cyber-homelab
 # Last updated:  2026-04-1
-# Version:       1.9.0
+# Version:       2.0.0
 # Purpose:
 #   - Hardware inventory for all machines in the home network.
 #   - Documents physical specs, OS configs, network posture, and active workloads.
@@ -239,16 +239,16 @@ machines:
       SSH and VPN. RAM and storage are soldered and not upgradeable.
       On VLAN 10 Trusted via 5 GHz WiFi.
 
-  - hostname: TBD
+  - hostname: inspiron
 
     metadata:
       type: laptop
-      role: TBD
+      role: docker-host
       status: online
       built: 2021
       manufacturer: Dell Inc.
       model: Inspiron 3505 (P90F)
-      tags: [TBD]
+      tags: [docker-host, self-hosted, secondary-node]
 
     network:
       vlan: 20
@@ -259,12 +259,12 @@ machines:
           speed: 100 Mbps
           ipv4: DHCP
           mac_address: "XX:XX:XX:XX:XX:XX"
-          note: Fast Ethernet only — USB Gigabit adapter recommended for lab use
+          note: Fast Ethernet only, USB Gigabit adapter for lab use
         - type: ethernet-usb
           chipset: USB 3.0 Gigabit Adapter
           speed: 1 Gbps
           interface: USB 3.0
-          ipv4: DHCP
+          ipv4: 192.168.20.XX
           note: primary ethernet interface for lab use
         - type: wifi
           chipset: Qualcomm QCA9377 (802.11ac)
@@ -311,15 +311,15 @@ machines:
         type: internal battery
 
     software:
-      os: Windows 10 Home
+      os: Ubuntu Server 24.04.4 LTS
       architecture: 64-bit
-      capabilities: [virtualization]
+      runtime: Docker
+      capabilities: [containerization, self-hosted-services]
 
     notes: >
-      Newly acquired machine, role TBD. AMD-V virtualization confirmed.
-      100 Mbps built-in ethernet is a known limitation — USB Gigabit adapter
-      in use as primary ethernet interface for lab use.
-      On VLAN 20 Lab via switch port 2.
+      Repurposed as a Docker host running Ubuntu Server 24.04 LTS.
+      100 Mbps built-in ethernet is a known limitation, USB Gigabit adapter
+      used as primary ethernet interface. Lid close sleep disabled via logind.conf.
 
 devices:
   - name: NVR

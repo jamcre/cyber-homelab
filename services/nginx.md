@@ -52,7 +52,7 @@ The certificate auto-renews via NPM's built-in renewal process.
 | `pihole.jamcre.dev`  | `http://192.168.20.XX:80`    | \*.jamcre.dev |                                                                                  |
 | `nginx.jamcre.dev`   | `http://192.168.20.XX:81`    | \*.jamcre.dev | NPM proxying itself                                                              |
 | `wazuh.jamcre.dev`   | `https://192.168.20.XX:443`  | \*.jamcre.dev | proxy_ssl_verify off, Websockets on                                              |
-| `nvr.jamcre.dev`     | `http://192.168.30.10:80`    | \*.jamcre.dev | IoT firewall exception required. Config only — live view not supported via proxy |
+| `nvr.jamcre.dev`     | `http://192.168.30.XX:80`    | \*.jamcre.dev | IoT firewall exception required. Config only — live view not supported via proxy |
 
 All proxy hosts have Force SSL and HSTS enabled. HTTP/2 is enabled. HSTS Sub-domains is off.
 
