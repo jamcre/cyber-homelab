@@ -47,6 +47,7 @@ Full details: [`infrastructure/proxmox.md`](./infrastructure/proxmox.md) · [`in
 | Pi-hole             | pavilion (LXC) | Network-wide DNS filtering        |
 | Nginx Proxy Manager | pavilion (LXC) | Reverse proxy and SSL termination |
 | Wazuh               | pavilion (VM)  | SIEM and endpoint detection       |
+| Portainer           | inspiron       | Docker container management       |
 
 Full details: [`services/pihole.md`](./services/pihole.md) · [`services/nginx.md`](./services/nginx.md) · [`services/wazuh.md`](./services/wazuh.md)
 

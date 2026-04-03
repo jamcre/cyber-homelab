@@ -54,13 +54,13 @@ Redesigned the home network from a flat single-subnet layout to a VLAN-segmented
 
 The Archer A7 uses the swconfig model (not DSA). The internal switch chip must be configured separately from the software VLAN interfaces. LAN 1 carries tagged traffic for all VLANs to the NETGEAR switch.
 
-| VLAN | CPU    | LAN 1  | LAN 2  | LAN 3 | LAN 4 | WAN      |
-| :--- | :----- | :----- | :----- | :---- | :---- | :------- |
-| 1    | tagged | off    | off    | off   | off   | off      |
-| 2    | tagged | off    | off    | off   | off   | untagged |
-| 10   | tagged | tagged | off    | off   | off   | off      |
-| 20   | tagged | tagged | off    | off   | off   | off      |
-| 30   | tagged | tagged | tagged | off   | off   | off      |
+| VLAN | CPU    | LAN 1  | LAN 2    | LAN 3 | LAN 4 | WAN      |
+| :--- | :----- | :----- | :------- | :---- | :---- | :------- |
+| 1    | tagged | off    | off      | off   | off   | off      |
+| 2    | tagged | off    | off      | off   | off   | untagged |
+| 10   | tagged | tagged | off      | off   | off   | off      |
+| 20   | tagged | tagged | off      | off   | off   | off      |
+| 30   | tagged | tagged | untagged | off   | off   | off      |
 
 ### OpenWRT — Interfaces
 

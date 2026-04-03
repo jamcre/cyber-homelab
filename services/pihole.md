@@ -63,13 +63,14 @@ This applies globally to all interfaces. Cloudflare (`1.1.1.1`) is the fallback 
 
 ## 🗺️ Local DNS Records
 
-| Hostname             | IP            | Description                  |
-| :------------------- | :------------ | :--------------------------- |
-| `proxmox.jamcre.dev` | 192.168.20.XX | Routes to Proxmox via NPM    |
-| `pihole.jamcre.dev`  | 192.168.20.XX | Routes to Pi-hole via NPM    |
-| `nginx.jamcre.dev`   | 192.168.20.XX | Routes to NPM admin via NPM  |
-| `wazuh.jamcre.dev`   | 192.168.20.XX | Routes to Wazuh via NPM      |
-| `nvr.jamcre.dev`     | 192.168.20.XX | Routes to NVR web UI via NPM |
+| Hostname               | IP            | Description                  |
+| :--------------------- | :------------ | :--------------------------- |
+| `proxmox.jamcre.dev`   | 192.168.20.XX | Routes to Proxmox via NPM    |
+| `pihole.jamcre.dev`    | 192.168.20.XX | Routes to Pi-hole via NPM    |
+| `nginx.jamcre.dev`     | 192.168.20.XX | Routes to NPM admin via NPM  |
+| `wazuh.jamcre.dev`     | 192.168.20.XX | Routes to Wazuh via NPM      |
+| `nvr.jamcre.dev`       | 192.168.20.XX | Routes to NVR web UI via NPM |
+| `portainer.jamcre.dev` | 192.168.20.XX | Routes to Portainer via NPM  |
 
 All three hostnames resolve to Nginx Proxy Manager, which routes each request to the correct backend service based on the hostname.
 

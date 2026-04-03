@@ -37,9 +37,9 @@ Ubuntu Server 24.04 LTS running on the Dell Inspiron 3505, serving as the homela
 
 Docker is the primary workload runtime on this node. Portainer is deployed for web-based container management.
 
-| Container | Function      | Port         |
-| :-------- | :------------ | :----------- |
-| portainer | Docker web UI | 9443 (HTTPS) |
+| Container | Function      | Port         | NPM URL                        |
+| :-------- | :------------ | :----------- | :----------------------------- |
+| portainer | Docker web UI | 9443 (HTTPS) | `https://portainer.jamcre.dev` |
 
 ---
 

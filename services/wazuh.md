@@ -38,11 +38,12 @@ A VM was created in Proxmox with no OS and no storage, then the OVA disk was att
 
 ## 🌐 Enrolled Agents
 
-| Agent    | OS      | Method              | Status    |
-| :------- | :------ | :------------------ | :-------- |
-| citadel  | Windows | MSI installer       | ✅ Active |
-| pavilion | Linux   | DEB package (amd64) | ✅ Active |
-| annex    | macOS   | PKG installer       | ✅ Active |
+| Agent    | OS             | Method              | Status    |
+| :------- | :------------- | :------------------ | :-------- |
+| citadel  | Windows        | MSI installer       | ✅ Active |
+| pavilion | Linux          | DEB package (amd64) | ✅ Active |
+| annex    | macOS          | PKG installer       | ✅ Active |
+| inspiron | Linux (Ubuntu) | DEB package (amd64) | ✅ Active |
 
 ---
 
