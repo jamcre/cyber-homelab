@@ -58,6 +58,21 @@ NPM proxy requires `proxy_ssl_verify off` due to Wazuh's self-signed backend cer
 
 ---
 
+## 🔍 Custom Detection Rules
+
+Custom rules are stored in `/var/ossec/etc/rules/local_rules.xml` on the Wazuh manager. Custom rule IDs use the 100000–999999 range to avoid conflicts with built-in rules.
+
+| Rule ID | Description                     | Base SID | Trigger                   | Level | MITRE     |
+| :------ | :------------------------------ | :------- | :------------------------ | :---- | :-------- |
+| 100001  | SSH brute force — invalid user  | 5710     | 5 attempts, same IP, 120s | 10    | T1110     |
+| 100002  | SSH auth failure spike          | 5760     | 8 failures, same IP, 60s  | 12    | T1110     |
+| 100003  | Linux unauthorized sudo attempt | 5405     | Single event              | 12    | T1548.003 |
+| 100004  | Windows failed logon spike      | 60122    | 5 failures, same IP, 120s | 10    | T1110     |
+
+## All rules tested and verified firing in the Wazuh dashboard. See `lab/custom-detection-rules.md` for full write-up.
+
+---
+
 ## 📝 Notes
 
 **pavilion agent — manual config required:** The DEB package installer does not always populate `MANAGER_IP` correctly in `/var/ossec/etc/ossec.conf`. The placeholder value `MANAGER_IP` must be replaced manually with the actual Wazuh server IP. The agent will fail to start entirely if the config is invalid — check `/var/ossec/logs/ossec.log` for the error.

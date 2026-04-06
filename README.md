@@ -57,7 +57,11 @@ Full details: [`services/pihole.md`](./services/pihole.md) · [`services/nginx.m
 
 ## 🔬 Security Lab
 
-> _To be documented once lab environment is built._
+| Exercise               | Description                                                                                                      | Status      |
+| :--------------------- | :--------------------------------------------------------------------------------------------------------------- | :---------- |
+| Custom Detection Rules | SSH brute force, Windows logon spike, unauthorized sudo — four custom Wazuh rules written, tested, and validated | ✅ Complete |
+
+Full write-up: [`lab/custom-detection-rules.md`](./lab/custom-detection-rules.md)
 
 ---
 
@@ -71,6 +75,8 @@ cyber-homelab/
 ├── infrastructure/
 │   ├── proxmox.md
 │   └── inspiron.md
+├── lab/
+│   └── custom-detection-rules.md
 ├── network/
 │   └── README.md
 ├── services/
