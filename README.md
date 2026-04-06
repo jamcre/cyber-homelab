@@ -48,6 +48,8 @@ Full details: [`infrastructure/proxmox.md`](./infrastructure/proxmox.md) · [`in
 | Nginx Proxy Manager | pavilion (LXC) | Reverse proxy and SSL termination |
 | Wazuh               | pavilion (VM)  | SIEM and endpoint detection       |
 | Portainer           | inspiron       | Docker container management       |
+| MySpeed             | pavilion (LXC) | Network speed testing             |
+| Homarr              | pavilion (LXC) | Homelab dashboard and service hub |
 
 Full details: [`services/pihole.md`](./services/pihole.md) · [`services/nginx.md`](./services/nginx.md) · [`services/wazuh.md`](./services/wazuh.md)
 
@@ -74,7 +76,9 @@ cyber-homelab/
 ├── services/
 │   ├── pihole.md
 │   ├── nginx.md
-│   └── wazuh.md
+│   ├── wazuh.md
+│   ├── myspeed.md
+|   └── homarr.md
 └── README.md
 ```
 

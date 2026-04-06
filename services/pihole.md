@@ -71,6 +71,8 @@ This applies globally to all interfaces. Cloudflare (`1.1.1.1`) is the fallback 
 | `wazuh.jamcre.dev`     | 192.168.20.XX | Routes to Wazuh via NPM      |
 | `nvr.jamcre.dev`       | 192.168.20.XX | Routes to NVR web UI via NPM |
 | `portainer.jamcre.dev` | 192.168.20.XX | Routes to Portainer via NPM  |
+| `myspeed.jamcre.dev`   | 192.168.20.XX | Routes to MySpeed via NPM    |
+| `homarr.jamcre.dev`    | 192.168.20.XX | Routes to Homarr via NPM     |
 
 All three hostnames resolve to Nginx Proxy Manager, which routes each request to the correct backend service based on the hostname.
 

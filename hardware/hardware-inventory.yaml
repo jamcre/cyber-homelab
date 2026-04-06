@@ -4,8 +4,8 @@
 # =============================================================================
 # Maintained by: James
 # Repository:    https://github.com/jamcre/cyber-homelab
-# Last updated:  2026-04-1
-# Version:       2.0.0
+# Last updated:  2026-04-02
+# Version:       2.1.0
 # Purpose:
 #   - Hardware inventory for all machines in the home network.
 #   - Documents physical specs, OS configs, network posture, and active workloads.
@@ -161,6 +161,16 @@ machines:
           function: reverse proxy and SSL termination
           ip: 192.168.20.XX
           note: CT ID 101
+        - name: myspeed
+          type: LXC
+          function: network speed testing and history
+          ip: 192.168.20.XX
+          note: CT ID 102
+        - name: homarr
+          type: LXC
+          function: homelab dashboard and service hub
+          ip: 192.168.20.XX
+          note: CT ID 103
       virtual_machines:
         - name: wazuh
           type: VM

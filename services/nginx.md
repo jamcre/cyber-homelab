@@ -54,6 +54,8 @@ The certificate auto-renews via NPM's built-in renewal process.
 | `wazuh.jamcre.dev`     | `https://192.168.20.XX:443`  | \*.jamcre.dev | proxy_ssl_verify off, Websockets on                                              |
 | `nvr.jamcre.dev`       | `http://192.168.30.XX:80`    | \*.jamcre.dev | IoT firewall exception required. Config only — live view not supported via proxy |
 | `portainer.jamcre.dev` | `https://192.168.20.XX:9443` | \*.jamcre.dev | Docker web UI on inspiron                                                        |
+| `myspeed.jamcre.dev`   | `http://192.168.20.XX:5216`  | \*.jamcre.dev | Network speed test dashboard                                                     |
+| `homarr.jamcre.dev`    | `http://192.168.20.XX:7575`  | \*.jamcre.dev | Homelab dashboard and service hub                                                |
 
 All proxy hosts have Force SSL and HSTS enabled. HTTP/2 is enabled. HSTS Sub-domains is off.
 
