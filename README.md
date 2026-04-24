@@ -27,7 +27,7 @@ Full hardware specs: [`hardware/hardware-inventory.yaml`](./hardware/hardware-in
 
 VLAN segmentation is live and verified. Firewall enforces zone isolation — Trusted can reach Lab, Lab cannot reach Trusted, IoT is fully isolated from internal networks.
 
-Full network design: [`network/README.md`](./network/README.md)
+Full network design: [`network/README.md`](./network/network.md)
 
 ---
 
