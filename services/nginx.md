@@ -27,10 +27,11 @@ _Role:_ Reverse proxy and SSL termination point. Centralizes ingress for `*.jamc
 
 ## 🌐 Proxy Hosts
 
-| Source                | Destination                  | Details                     |
-| :-------------------- | :--------------------------- | :-------------------------- |
-| `optiplex.jamcre.dev` | `https://192.168.20.XX:8006` | Webscokets, Force SSL, HSTS |
-| `pihole.jamcre.dev`   | `http://192.168.20.XX:80`    | Force SSL, HSTS             |
-| `nginx.jamcre.dev`    | `http://192.168.20.XX:81`    | Self-proxying admin panel   |
+| Source                | Destination                  | Details                                                 |
+| :-------------------- | :--------------------------- | :------------------------------------------------------ |
+| `optiplex.jamcre.dev` | `https://192.168.20.XX:8006` | Webscokets, Force SSL, HSTS                             |
+| `pihole.jamcre.dev`   | `http://192.168.20.XX:80`    | Force SSL, HSTS                                         |
+| `nginx.jamcre.dev`    | `http://192.168.20.XX:81`    | Self-proxying admin panel                               |
+| `homepage.jamcre.dev` | `https://192.168.20.XX:3000` | Host Validation error, requires ENV in homepage.service |
 
 ---

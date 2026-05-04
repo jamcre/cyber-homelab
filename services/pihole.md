@@ -39,5 +39,6 @@ _Role:_ Network-wide DNS filtering and internal record management.
 | `optiplex.jamcre.dev` | 192.168.20.XX | Routes to Proxmox via NPM   |
 | `pihole.jamcre.dev`   | 192.168.20.XX | Routes to Pi-hole via NPM   |
 | `nginx.jamcre.dev`    | 192.168.20.XX | Routes to NPM admin via NPM |
+| `homepage.jamcre.dev` | 192.168.20.XX | Routes to Homepage via NPM  |
 
 ---

@@ -44,10 +44,11 @@ Tweaks made during setup:
 
 ## 🖥️ Workload
 
-| Type | Name   | Function                                            |
-| :--- | :----- | :-------------------------------------------------- |
-| LXC  | pihole | Network-wide DNS filtering — see `services/`        |
-| LXC  | nginx  | Reverse proxy and SSL termination — see `services/` |
+| Type | Name     | Function                                            |
+| :--- | :------- | :-------------------------------------------------- |
+| LXC  | pihole   | Network-wide DNS filtering — see `services/`        |
+| LXC  | nginx    | Reverse proxy and SSL termination — see `services/` |
+| LXC  | homepage | Central Homepage — see `services/`                  |
 
 ---
 

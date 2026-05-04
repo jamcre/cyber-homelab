@@ -37,10 +37,11 @@ Proxmox VE running on optiplex as the core virtualization host. For more details
 
 ## 🛎️ Services
 
-| Service             | Host           | Function                          | Details                                      |
-| :------------------ | :------------- | :-------------------------------- | :------------------------------------------- |
-| Pi-hole             | optiplex (LXC) | Network-wide DNS filtering        | [`services/pihole.md`](./services/pihole.md) |
-| Nginx Proxy Manager | optiplex (LXC) | Reverse proxy and SSL termination | [`services/nginx.md`](./services/nginx.md)   |
+| Service             | Host           | Function                          | Details                                          |
+| :------------------ | :------------- | :-------------------------------- | :----------------------------------------------- |
+| Pi-hole             | optiplex (LXC) | Network-wide DNS filtering        | [`services/pihole.md`](./services/pihole.md)     |
+| Nginx Proxy Manager | optiplex (LXC) | Reverse proxy and SSL termination | [`services/nginx.md`](./services/nginx.md)       |
+| Homepage            | optiplex (LXC) | Central Homepage                  | [`services/homepage.md`](./services/homepage.md) |
 
 ---
 
@@ -62,7 +63,8 @@ cyber-homelab/
 │   └── network.md
 ├── services/
 │   ├── pihole.md
-│   └── nginx.md
+│   ├── nginx.md
+│   └── homepage.md
 ├── .gitignore
 └── README.md
 
