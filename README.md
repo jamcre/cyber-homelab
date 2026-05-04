@@ -1,17 +1,17 @@
-# Cybersecurity Homelab — v2
+# Homelab — v3
 
-This repository documents the second iteration of my cybersecurity homelab. Building on [v1](./v1/README.md), this version introduces a multi-node infrastructure, VLAN-segmented networking, and a more intentional service architecture.
+This repo documents the third iteration of my homelab, building on [v1](./v1/README.md) & [v2](./v2/README.md). In this version, I focus on working with a stronger computer. The goal being to expand the scope of the lab, beyond just cybersecurity.
 
 ---
 
 ## 🖥️ Hardware
 
-| Hostname | Type    | Role                | OS                  | VLAN         | IP            |
-| :------- | :------ | :------------------ | :------------------ | :----------- | :------------ |
-| citadel  | Desktop | Primary Workstation | Windows 11 Home     | 10 — Trusted | 192.168.10.XX |
-| pavilion | Desktop | Virtualization Host | Proxmox VE 8.4      | 20 — Lab     | 192.168.20.XX |
-| annex    | Laptop  | Mobile Workstation  | macOS Sequoia       | 10 — Trusted | DHCP          |
-| inspiron | Laptop  | Docker Host         | Ubuntu Server 24.04 | 20 — Lab     | 192.168.20.XX |
+| Hostname | Type    | Role                | OS              | VLAN         | IP            |
+| :------- | :------ | :------------------ | :-------------- | :----------- | :------------ |
+| citadel  | Desktop | Workstation         | Windows 11 Home | 10 — Trusted | 192.168.10.XX |
+| annex    | Laptop  | Workstation         | macOS Sequoia   | 10 — Trusted | 192.168.10.XX |
+| optiplex | Desktop | Virtualization Host | Proxmox VE 8.4  | 20 — Lab     | 192.168.20.XX |
+| inspiron | Laptop  | TBD                 | TBD             | TBD          | TBD           |
 
 Full hardware specs: [`hardware/hardware-inventory.yaml`](./hardware/hardware-inventory.yaml)
 
@@ -25,43 +25,22 @@ Full hardware specs: [`hardware/hardware-inventory.yaml`](./hardware/hardware-in
 | 20   | Lab     | 192.168.20.0/24 | Homelab infrastructure |
 | 30   | IoT     | 192.168.30.0/24 | Smart devices & NVR    |
 
-VLAN segmentation is live and verified. Firewall enforces zone isolation — Trusted can reach Lab, Lab cannot reach Trusted, IoT is fully isolated from internal networks.
-
-Full network design: [`network/network.md`](./network/network.md)
+VLAN segmentation is live, along with Firewall enforcements. For more details on network design: [`network/network.md`](./network/network.md)
 
 ---
 
 ## ⚙️ Infrastructure
 
-Proxmox VE running on pavilion as the core virtualization host.
-Ubuntu Server running on inspiron as the Docker host for self-hosted services.
-
-Full details: [`infrastructure/proxmox.md`](./infrastructure/proxmox.md) · [`infrastructure/inspiron.md`](./infrastructure/inspiron.md)
+Proxmox VE running on optiplex as the core virtualization host. For more details: [`infrastructure/optiplex.md`](./infrastructure/optiplex.md)
 
 ---
 
-## ⚙️ Services
+## 🛎️ Services
 
-| Service             | Host           | Function                          |
-| :------------------ | :------------- | :-------------------------------- |
-| Pi-hole             | pavilion (LXC) | Network-wide DNS filtering        |
-| Nginx Proxy Manager | pavilion (LXC) | Reverse proxy and SSL termination |
-| Wazuh               | pavilion (VM)  | SIEM and endpoint detection       |
-| Portainer           | inspiron       | Docker container management       |
-| MySpeed             | pavilion (LXC) | Network speed testing             |
-| Homarr              | pavilion (LXC) | Homelab dashboard and service hub |
-
-Full details: [`services/pihole.md`](./services/pihole.md) · [`services/nginx.md`](./services/nginx.md) · [`services/wazuh.md`](./services/wazuh.md)
-
----
-
-## 🔬 Security Lab
-
-| Exercise               | Description                                                                                                      | Status      |
-| :--------------------- | :--------------------------------------------------------------------------------------------------------------- | :---------- |
-| Custom Detection Rules | SSH brute force, Windows logon spike, unauthorized sudo — four custom Wazuh rules written, tested, and validated | ✅ Complete |
-
-Full write-up: [`lab/custom-detection-rules.md`](./lab/custom-detection-rules.md)
+| Service             | Host           | Function                          | Details                                      |
+| :------------------ | :------------- | :-------------------------------- | :------------------------------------------- |
+| Pi-hole             | optiplex (LXC) | Network-wide DNS filtering        | [`services/pihole.md`](./services/pihole.md) |
+| Nginx Proxy Manager | optiplex (LXC) | Reverse proxy and SSL termination | [`services/nginx.md`](./services/nginx.md)   |
 
 ---
 
@@ -70,24 +49,26 @@ Full write-up: [`lab/custom-detection-rules.md`](./lab/custom-detection-rules.md
 ```
 cyber-homelab/
 ├── v1/                        # Archived first iteration
-├── hardware/
+├── v2/                        # Archived second iteration
+├── docs/
+│   ├── conventions.md
 │   └── hardware-inventory.yaml
 ├── infrastructure/
-│   ├── proxmox.md
-│   └── inspiron.md
+│   ├── optiplex.md
+│   └── template-node.md
 ├── lab/
 │   └── custom-detection-rules.md
 ├── network/
-│   └── README.md
+│   └── network.md
 ├── services/
 │   ├── pihole.md
-│   ├── nginx.md
-│   ├── wazuh.md
-│   ├── myspeed.md
-|   └── homarr.md
+│   └── nginx.md
+├── .gitignore
 └── README.md
+
 ```
 
 ---
 
 _v1 archive available [here](./v1/README.md)._
+_v2 archive available [here](./v2/README.md)._

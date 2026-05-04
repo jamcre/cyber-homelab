@@ -1,6 +1,6 @@
 # Lab Conventions
 
-Reference document for IPs and CT/VM ID conventions. All assignments in my homenet/homelab will try to follow these rules.
+Reference document for IPs and CT/VM ID conventions. All assignments in my homenet and homelab will try to follow these rules.
 
 ---
 
@@ -8,14 +8,15 @@ Reference document for IPs and CT/VM ID conventions. All assignments in my homen
 
 **Low number = higher importance.**
 
-Priority-Based Addressing:
-
-- Static (.1–.99): Core infrastructure and fixed nodes.
-- Dynamic (.100–.254): Transient/DHCP clients.
+- Network infra at the bottom of every subnet.
+- Dynamic and transient devices float to the top.
+- Makes purpose of any IP clear.
 
 ---
 
-## IP & VLAN Schema
+## Universal IP Convention
+
+The same structure applies to every VLAN. Once you know the pattern, easy to determine what's what.
 
 | Range       | Category               | Notes                                              |
 | :---------- | :--------------------- | :------------------------------------------------- |
@@ -31,25 +32,23 @@ Priority-Based Addressing:
 
 ## VLAN Assignments
 
-| VLAN | Name    | Subnet          | Purpose                                            |
-| :--- | :------ | :-------------- | :------------------------------------------------- |
-| 10   | Trusted | 192.168.10.0/24 | Personal devices (Phones, PC)                      |
-| 20   | Lab     | 192.168.20.0/24 | Homelab infrastructure (Servers, VMs, LXCs)        |
-| 30   | IoT     | 192.168.30.0/24 | Smart home devices (Fridge, Robo-Vacuum, AC units) |
-| 40   | Cams    | 192.168.40.0/24 | Surveillance (NVR/cameras)                         |
-
-The same structure applies to every VLAN. Once you know the pattern, easy to determine what's what.
+| VLAN | Name    | Subnet          | Purpose                                           |
+| :--- | :------ | :-------------- | :------------------------------------------------ |
+| 10   | Trusted | 192.168.10.0/24 | Personal devices — workstations, laptops, phones  |
+| 20   | Lab     | 192.168.20.0/24 | Homelab infrastructure — servers, VMs, containers |
+| 30   | IoT     | 192.168.30.0/24 | Smart home devices — appliances, ACs, robot       |
+| 40   | Cams    | 192.168.40.0/24 | Surveillance — NVR and cameras (WIP)              |
 
 ---
 
 ## Proxmox CT/VM ID Convention
 
-**Format:** [Type][Deployment Order] (eg: 101, -> LXC container, 2nd deployed)
+**Rule:** First digit encodes the type. Last two digits are order of deployment
 
 | ID Range | Type              | Examples                         |
 | :------- | :---------------- | :------------------------------- |
-| 1XX      | LXC container     | Pi-hole, NPM, Homepage           |
-| 2XX      | Security VM       | Wazuh, SOC tooling               |
+| 1XX      | LXC container     | Pi-hole, NPM, Homarr, monitoring |
+| 2XX      | Security VM       | Wazuh, TheHive, SOC tooling      |
 | 3XX      | Application VM    | Crafty, Ghost, web apps          |
 | 4XX      | Infrastructure VM | Network or system-level full VMs |
 | 5XX      | Dev / Lab VM      | Kali, targets, scratch boxes     |
