@@ -44,16 +44,16 @@ The same structure applies to every VLAN. Once you know the pattern, easy to det
 
 ## Proxmox CT/VM ID Convention
 
-**Format:** [Type][Deployment Order] (eg: 101, -> LXC container, 2nd deployed)
+**Format:** [Category][Deployment Order] (eg: 101, -> LXC container, 2nd deployed)
 
-| ID Range | Type              | Examples                         |
+| ID Range | Category              | Examples                         |
 | :------- | :---------------- | :------------------------------- |
-| 1XX      | LXC container     | Pi-hole, NPM, Homepage           |
-| 2XX      | Security VM       | Wazuh, SOC tooling               |
-| 3XX      | Application VM    | Crafty, Ghost, web apps          |
-| 4XX      | Infrastructure VM | Network or system-level full VMs |
-| 5XX      | Dev / Lab VM      | Kali, targets, scratch boxes     |
-| 9XX      | Templates         | Base images, reusable installs   |
+| 1XX      | Core Infrastructure     | Pi-hole, NPM, Homepage           |
+| 2XX      | Applications & Self-hosted Services       | Jellyfin, Crafty, Ghost, web apps               |
+| 3XX      | Monitoring & Security   | Wazuh, Grafana, Prometheus, SOC tooling         |
+| 4XX      | Network & System Infrastructure| TrueNAS, Proxmox Backup Server, utility VMs |
+| 5XX      | Development & Lab      | Kali, targets, scratch boxes     |
+| 9XX      | Templates & Base Images         | Base images, reusable installs   |
 
 ---
 
