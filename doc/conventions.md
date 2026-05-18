@@ -22,9 +22,8 @@ Priority-Based Addressing:
 | .1          | Gateway                | Router interface for this VLAN                     |
 | .2 — .9     | Network infrastructure | Switches, APs, managed network devices             |
 | .10 — .19   | Physical nodes         | Servers, workstations, laptops (Physical machines) |
-| .20 — .49   | LXC containers         | Lightweight containers (Proxmox)                   |
-| .50 — .74   | Virtual machines       | Full VMs (Proxmox)                                 |
-| .75 — .99   | Reserved               | Future expansion (aka idk yet)                     |
+| .20 — .59   | LXC containers         | Lightweight containers (Proxmox)                   |
+| .60 — .99   | Virtual machines       | Full VMs (Proxmox)                                 |
 | .100 — .254 | DHCP pool              | All dynamic clients (phones, tablets, etc.)        |
 
 ---
